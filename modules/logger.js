@@ -5,7 +5,7 @@ var fileStreamRotator = require('file-stream-rotator')
 var config = require("./config.js")
 // var execDb = require("./mongodb.js")
 var common = require('./common')
-var logDirectory = config.logDir || path.join(__dirname, 'logs')
+var logDirectory = config.logDir || path.join("./", 'logs')
 fs.existsSync(logDirectory) || fs.mkdirSync(logDirectory)
 var accessLogfile = fileStreamRotator.getStream({
     date_format: 'YYYY-MM-DD',
